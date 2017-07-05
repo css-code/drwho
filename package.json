@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^4.2.5",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
     "@angular/core": "^4.0.0",
@@ -22,6 +23,8 @@
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
     "glyphicons": "^0.2.0",
+    "ng2-bootstrap": "^1.6.3",
+    "ng2-toastr": "^4.1.2",
     "ng2f-bootstrap": "0.0.4",
     "rxjs": "^5.1.0",
     "toastr": "^2.1.2",

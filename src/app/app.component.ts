@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
+  constructor(public toastr: ToastsManager, vRef: ViewContainerRef) {
+    this.toastr.setRootViewContainerRef(vRef);
+  }
+
   title = 'Use TypeScript not Javascript!';
   public results: Array<string> = new Array<string>();
 
   ngOnInit(): void {
-    var result: string;
-   
+    let result: string;
+
     for (let num = 10; num < 101; num++) {
-  
+
       result = '';
       // see if number is divisible by 4 nd 6
       var div_4 = (num % 4 == 0);
@@ -33,6 +38,8 @@ export class AppComponent implements OnInit {
         result = num.toString();
 
       this.results.push(result);
+      
     }
+  this.toastr.success('Successfully created list.', 'Success!');
   }
 }
