@@ -1,3 +1,10 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <h2>
+    {{title}}
+  </h2>
+
+  <div>
+    <ul>
+      <li *ngFor="let result of results, let i = index"> {{result}} <span style="color: red;" *ngIf='i+10 != result'> ({{i+10}})</span> </li>
+    </ul>
+  </div> 
